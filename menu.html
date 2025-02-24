@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Sweet Shop Catalog</title>
+    <link rel="stylesheet" href="navstyles.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Base styles */
+        body {
+            background-image: url('images/menu.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+
+        h1, h2 {
+            color: #dcad2a;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .category-card {
+            text-align: center;
+            margin: 15px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: white;
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: 200px;
+        }
+
+        .category-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .category-card img {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto;
+            border-radius: 50%;
+        }
+
+        .category-card h3 {
+            font-size: 18px;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .category-list {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 80px;
+            margin-bottom: 30px;
+        }
+        a{
+            text-decoration: none;
+        }
+
+        .row {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 768px) {
+            .category-card img {
+                width: 120px;
+                height: 120px;
+            }
+            .category-card {
+                width: 150px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <header>
+                <nav>
+                    <div class="logo">Mitai</div>
+                    <div class="nav-links" id="navLinks">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="menu.html">Menu</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </nav>
+            </header>
+
+            <h2>Our Categories</h2>
+            <div class="category-list">
+                <!-- Traditional Sweets -->
+                <div class="category-card">
+                    <a href="product.html">
+                        <img src="https://tse2.mm.bing.net/th?id=OIP.iT3BgzCKu8duI1097r1OogHaE8&pid=Api&P=0&h=180" alt="Traditional Sweets">
+                    <h3>Traditional Sweets</h3></a>
+                </div>
+
+                <!-- Milk Sweets -->
+                <div class="category-card">
+                        <img src="https://tse2.mm.bing.net/th?id=OIP.iT3BgzCKu8duI1097r1OogHaE8&pid=Api&P=0&h=180" alt="Traditional Sweets">
+                    <h3>Milk Sweets</h3>
+                </div>
+
+                <!-- Bengali Sweets -->
+                <div class="category-card">
+                    <img src="https://tse2.mm.bing.net/th?id=OIP.INpqQYfhTqxViisg6rxgXAHaE6&pid=Api&P=0&h=180" alt="Bengali Sweets">
+                    <h3>Bengali Sweets</h3>
+                </div>
+
+                <!-- Dryfruits N Bites -->
+                <div class="category-card">
+                    <img src="https://www.newrameshkirana.com/wp-content/uploads/2020/06/Dryfruit-honey-bites-scaled.jpg" alt="Dryfruits N Bites">
+                    <h3>Dryfruits N Bites</h3>
+                </div>
+
+                <!-- Kaja Sweets N Special Items -->
+                <div class="category-card">
+                    <img src="https://m.media-amazon.com/images/I/51ODD6Q+6RL.jpg" alt="Kaja Sweets N Special Items">
+                    <h3>Kaja Sweets N Special Items</h3>
+                </div>
+
+                <!-- Hot Items -->
+                <div class="category-card">
+                    <img src="https://res.cloudinary.com/jerrick/image/upload/d_642250b563292b35f27461a7.png,f_jpg,fl_progressive,q_auto,w_1024/6482328e915504001d759e3c.jpg" alt="Hot Items">
+                    <h3>Hot Items</h3>
+                </div>
+
+                <!-- Karam Podulu N Pickles -->
+                <div class="category-card">
+                    <img src="https://wallpaperaccess.com/full/4498025.jpg" alt="Karam Podulu N Pickles">
+                    <h3>Karam Podulu N Pickles</h3>
+                </div>
+
+                <!-- Bakery -->
+                <div class="category-card">
+                    <img src="http://flavorverse.com/wp-content/uploads/2018/01/Kaju-Barfi-Indian-Dessert-with-Silver-Foil.jpg" alt="Bakery">
+                    <h3>Bakery</h3>
+                </div>
+
+                <!-- Milk Shakes -->
+                <div class="category-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSc3e1FDbW6GxsQNgMUaBOhuSY0XPoq43VAmg&s" alt="Milk Shakes">
+                    <h3>Milk Shakes</h3>
+                </div>
+
+                <!-- Chaat -->
+                <div class="category-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIpDROZNAC7LjmvEw39dRlGCnGcPXqQI2A0w&s" alt="Chaat">
+                    <h3>Chaat</h3>
+                </div>
+
+                <!-- Juices -->
+                <div class="category-card">
+                    <img src="https://media.istockphoto.com/id/1253099922/photo/assortment-of-fresh-fruits-and-vegetables-juices-in-rainbow-colors.jpg?s=612x612&w=0&k=20&c=lFC0lAcR0FoPegoMTuJxc3fEAISbJVwZ1VmWNHzVEX8=" alt="Juices">
+                    <h3>Juices</h3>
+                </div>
+
+                <!-- Drinks -->
+                <div class="category-card">
+                    <img src="https://www.shutterstock.com/image-photo/poznan-poland-oct-28-2021-600nw-2075670211.jpg" alt="Drinks">
+                    <h3>Drinks</h3>
+                </div>
+
+                <!-- Ice Cream -->
+                <div class="category-card">
+                    <img src="https://media.gettyimages.com/id/157472912/photo/ice-cream-composition-on-a-bowl.jpg?s=612x612&w=gi&k=20&c=AniWX1OhaarUxCkgjUoKiA3bKVllK0upCylW6Z0PCMQ=" alt="Ice Cream">
+                    <h3>Ice Cream</h3>
+                </div>
+
+                <!-- Chocolates -->
+                <div class="category-card">
+                    <img src="https://mrbrownbakery.com/image/images/GJ7uCwGiteTF24HTWBclkziVTdhpQeZWH23MvQfq.jpeg?p=full" alt="Chocolates">
+                    <h3>Chocolates</h3>
+                </div>
+
+                <!-- Festival Items -->
+                <div class="category-card">
+                    <img src="https://cdn.citymapia.com/puthuppally/best-bakers-and-restaurent/2408/Portfolio.jpg?biz=541" alt="Festival Items">
+                    <h3>Festival Items</h3>
+                </div>
+
+                <!-- Miscellaneous -->
+                <div class="category-card">
+                    <img src="https://okcredit-blog-images-prod.storage.googleapis.com/2021/05/bakerysupplies2.jpg" alt="Miscellaneous">
+                    <h3>Miscellaneous</h3>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

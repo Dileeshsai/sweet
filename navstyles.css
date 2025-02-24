@@ -1,0 +1,123 @@
+
+
+/* Navbar Styling */
+header {
+background-color: transparent;
+    background-size: cover;
+    position: relative;
+}
+
+nav {
+    font-family: "Vollkorn", serif;
+    font-optical-sizing: auto;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav .logo {
+    width: 30%;
+    font-size: 2rem;
+    color: rgb(244, 240, 240);
+    font-weight: bold;
+}
+nav .nav-links{
+    width: 70%;
+}
+
+nav .nav-links ul { 
+    padding-left: 100px;  
+    list-style-type: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav .nav-links ul li {
+    display: inline;
+}
+
+nav .nav-links ul li a {
+    color: rgb(248, 243, 243);
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+nav .nav-links ul li a:hover {
+    color: #fffacd;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    background-color: white;
+    height: 4px;
+    width: 100%;
+    border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+    nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-between; /* Align logo and hamburger to opposite sides */
+        align-items: center;
+    }
+
+    nav .logo {
+        flex: 1;
+        font-size: 2rem;
+        color: rgb(244, 240, 240);
+        font-weight: bold;
+        text-align: left; /* Align logo to the left */
+    }
+
+    nav .nav-links {
+        display: none;
+    }
+
+    nav .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 20px;
+        cursor: pointer;
+    }
+
+    nav .hamburger span {
+        background-color: white;
+        height: 4px;
+        width: 100%;
+        border-radius: 2px;
+    }
+
+    nav .nav-links.active {
+        display: block;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        background: linear-gradient(0deg, #f4bb03, #b46908);
+        padding: 1rem 0;
+        z-index: 1;
+    }
+
+    nav .nav-links ul {
+        flex-direction: column;
+        text-align: left;
+        gap: 1rem;
+    }
+
+    nav .nav-links ul li {
+        display: block;
+    }
+}

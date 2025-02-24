@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mitai Bakery</title>
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            overflow-x: hidden;
+            box-sizing: border-box;
+        }
+
+        /* Smooth scroll for the page */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Background image for the body */
+        .static-background {
+            background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20210501/pngtree-aesthetic-orange-gold-marble-background-image_691021.jpg'); /* Replace with your desired image */
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+.logo{
+    text-align: left;
+}
+        /* General section styles */
+        section {
+            text-align: center;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            display: block;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #ffcc00;
+            transition: transform 0.3s ease;
+            text-shadow:
+                0 0 5px rgb(30, 32, 32),
+                0 0 10px rgb(14, 14, 14),
+                0 0 20px rgb(14, 15, 15),
+                0 0 40px rgb(12, 17, 17),
+                0 0 80px rgb(13, 13, 13);
+        }
+
+        p {
+            font-size: 1.5rem;
+            color: #0d0d0d;
+            line-height: 1.6;
+            transition: opacity 0.3s ease;
+        }
+
+        /* Section 1: About Us */
+        #about {
+            color: #fff;
+            text-shadow:
+                0 0 5px rgb(30, 32, 32),
+                0 0 10px rgb(14, 14, 14),
+                0 0 20px rgb(14, 15, 15),
+                0 0 40px rgb(12, 17, 17),
+                0 0 80px rgb(13, 13, 13);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #about h2 {
+            font-size: 3rem;
+            color: #fbf7f7;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: color 0.3s ease;
+        }
+        #about p{
+            color: #fbf7f7;
+
+        }
+
+        /* Section 2: Left block with description and right block with image */
+        #services {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        #services .text {
+            width: 50%;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: black;
+            text-align: center;
+        }
+.text p{
+    color: black;
+}
+        #services .image {
+            width: 50%;
+            max-width: 500px;
+            transition: transform 0.3s ease;
+            display: flex;
+            justify-content: center;
+        }
+
+        #services .image img {
+            width: 100%;
+            border-radius: 10px;
+            transform: scale(1);
+            transition: transform 0.3s ease;
+        }
+
+        /* Hover Effects */
+        #services:hover {
+            transform: translateY(-10px);
+        }
+
+        #services .image:hover img {
+            transform: scale(1.05);
+        }
+        /* Section 3: Continued background image with description */
+        #about-background {
+            background-size: cover;
+            color: #fff;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s ease;
+        }
+.heading{
+    width: 60%;
+margin-top: 50px;
+}
+        #about-background h2 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: #ffcc00;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        #about-background p {
+            font-size: 1.2rem;
+            width: 60%;
+            margin: 0 auto;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+
+        #about-background:hover p {
+            opacity: 1;
+        }
+
+        /* Section 4: Right block with description and left block with image */
+        #menu {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        #menu .image {
+            width: 100%;
+            max-width: 500px;
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+        }
+
+        #menu .image img {
+            width: 50%;
+            border-radius: 10px;
+            transform: scale(1);
+            transition: transform 0.3s ease;
+        }
+
+        #menu .text {
+            width: 50%;
+            font-size: 1.1rem;
+            color: #fff;
+            text-align: center;
+        }
+
+        /* Hover Effects */
+        #menu:hover {
+            transform: translateY(-10px);
+        }
+
+        #menu .image:hover img {
+            transform: scale(1.05);
+        }
+
+        #menu .text:hover {
+            transform: translateX(10px);
+        }
+
+        /* Section 5: Testimonial with continued background image */
+        #testimonial {
+            background: url('https://example.com/static-bg.jpg') no-repeat center center;
+            background-size: cover;
+            color: #f0f0f0;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        #testimonial h2 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            color: #ffcc00;
+            letter-spacing: 3px;
+        }
+
+        #testimonial p {
+            width: 60%;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            opacity: 0.8;
+        }
+        @media (max-width: 768px) {
+.heading{
+    margin-top: 0;
+}
+
+    /* Update font sizes */
+    h2 {
+        font-size: 1.5 rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    /* About Section */
+
+
+    /* Services Section */
+    #services {
+        flex-direction: column;
+    }
+
+    #services .text, #services .image {
+        width: 100%;
+    }
+
+    /* About Background Section */
+    #about-background {
+    }
+
+    /* Menu Section */
+    #menu {
+        flex-direction: column;
+    }
+
+    #menu .image, #menu .text {
+        width: 100%;
+    }
+
+    /* Testimonial Section */
+
+}
+
+header {
+    background-color: transparent;
+    background-size: cover;
+    position: relative;
+    width: 100%; /* Ensure the header takes full width */
+}
+
+nav {
+    font-family: "Vollkorn", serif;
+    font-optical-sizing: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+nav .logo {
+    font-size: 2rem;
+    color: rgb(244, 240, 240);
+    font-weight: bold;
+    text-align: left;
+}
+
+nav .nav-links {
+    display: flex;
+    justify-content: center;
+    width: 100%; /* Ensure it takes full width and align items accordingly */
+}
+
+nav .nav-links ul {
+    padding-left: 0; /* Remove padding to prevent overflow */
+    list-style-type: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav .nav-links ul li {
+    display: inline;
+}
+
+nav .nav-links ul li a {
+    color: rgb(248, 243, 243);
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+nav .nav-links ul li a:hover {
+    color: #fffacd;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    background-color: white;
+    height: 4px;
+    width: 100%;
+    border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+    nav {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    nav .logo {
+        flex: 1;
+        text-align: left;
+    }
+
+    nav .nav-links {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        background: linear-gradient(0deg, #f4bb03, #b46908);
+        z-index: 1;
+    }
+
+    nav .nav-links.active {
+        display: block;
+    }
+
+    nav .nav-links ul {
+        flex-direction: column;
+        text-align: left;
+        gap: 1rem;
+        padding-left: 1rem; /* Adjust padding */
+    }
+
+    nav .nav-links ul li {
+        display: block;
+    }
+
+    nav .hamburger {
+        display: flex;
+    }
+}
+    </style>
+</head>
+<body class="static-background">
+    <!-- Section 1: About Us -->
+    <section id="about">
+        <header>
+            <nav>
+                <div class="logo">Mitai</div>
+                <div class="nav-links" id="navLinks">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </header> 
+        <div class="heading">      
+        <h2>about Mitai Bakery</h2>
+        <p>At Mitai Bakery, we create delightful pastries and sweets that warm your heart and satisfy your cravings. With over 10 years of experience, our team crafts fresh, delicious treats daily to share with the community.</p>
+        </div>
+    </section>
+
+    <!-- Section 2: Services with Left Description and Right Image -->
+    <section id="services">
+        <div class="text">
+            <h2>Our Specialities</h2>
+            <p>From soft, fluffy cakes to crispy, delicate cookies, Mitai Bakery offers a wide range of delicious baked goods. We ensure the finest quality with every batch, using only premium ingredients to guarantee satisfaction with each bite.</p>
+        </div>
+        <div class="image">
+            <img src="https://i.pinimg.com/originals/78/b2/f3/78b2f342f1ee72b0652dcccb865caf9c.jpg" alt="Bakery Specialties">
+        </div>
+    </section>
+
+    <!-- Section 3: Continued Background Image with Description -->
+    <section id="about-background">
+        <h2>Why Choose Us?</h2>
+        <p>Mitai Bakery isn't just about food, it's about an experience. We prioritize freshness, quality, and customer satisfaction in every product we bake. Our commitment to excellence is what keeps our loyal customers coming back for more!</p>
+    </section>
+
+    <!-- Section 4: Menu with Right Description and Left Image -->
+    <section id="menu">
+        <div class="image">
+            <img src="https://wallpapers.com/images/hd/shot-of-bakery-bread-x4bgj6adcoqjiohh.jpg" alt="Bakery Menu">
+        </div>
+        <div class="text">
+            <h2>Explore Our Menu</h2>
+            <p>From the classic croissant to exotic sweet buns, our menu is designed to cater to every taste. Whether you're looking for breakfast pastries, afternoon snacks, or a perfect dessert to end your meal, Mitai Bakery has something for everyone.</p>
+        </div>
+    </section>
+
+    <!-- Section 5: Testimonial with Continued Background Image -->
+    <section id="testimonial">
+        <h2>What Our Customers Say</h2>
+        <p>"Mitai Bakery has been my go-to spot for years! Their cakes are always fresh, and the flavor combinations are divine. I highly recommend them to anyone with a sweet tooth!"</p>
+        <p>- Emily, Loyal Customer</p>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

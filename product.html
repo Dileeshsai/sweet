@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traditional Sweets</title>
+    <link rel="stylesheet" href="navstyles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #413d3d;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .product-row {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            margin: 15px 0;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .product-image {
+            width: 120px;
+            height: 120px;
+            margin-right: 20px;
+            object-fit: cover;
+        }
+        .product-details {
+            flex: 1;
+        }
+        .product-details h3 {
+            margin: 0;
+            font-size: 1.2em;
+        }
+        .product-details p {
+            margin: 5px 0;
+        }
+        .quantity-input {
+            width: 100px;
+            padding: 5px;
+            margin: 10px 0;
+        }
+        .price {
+            font-size: 1.3em;
+            color: green;
+        }
+        .buy-button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+            border-radius: 5px;
+        }
+        .buy-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Mitai</div>
+            <div class="nav-links" id="navLinks">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header> 
+    <div class="container">
+        <!-- Pootharekulu Big -->
+        <div class="product-row">
+            <img src="pootharekulu-big.jpg" alt="Pootharekulu Big" class="product-image">
+            <div class="product-details">
+                <h3>Pootharekulu Big</h3>
+                <p>Quantity: <input type="number" class="quantity-input" value="1000" min="1" onchange="updatePrice(this, 35)"> grams</p>
+                <p class="price">Price: ₹<span class="product-price">35</span></p>
+            </div>
+            <button class="buy-button">Buy Now</button>
+        </div>
+
+        <!-- Pootharekulu Small -->
+        <div class="product-row">
+            <img src="pootharekulu-small.jpg" alt="Pootharekulu Small" class="product-image">
+            <div class="product-details">
+                <h3>Pootharekulu Small</h3>
+                <p>Quantity: <input type="number" class="quantity-input" value="1000" min="1" onchange="updatePrice(this, 25)"> grams</p>
+                <p class="price">Price: ₹<span class="product-price">25</span></p>
+            </div>
+            <button class="buy-button">Buy Now</button>
+        </div>
+
+        <!-- Palli Undalu -->
+        <div class="product-row">
+            <img src="palli-undalu.jpg" alt="Palli Undalu" class="product-image">
+            <div class="product-details">
+                <h3>Palli Undalu</h3>
+                <p>Quantity: <input type="number" class="quantity-input" value="1000" min="1" onchange="updatePrice(this, 360)"> grams</p>
+                <p class="price">Price: ₹<span class="product-price">360</span></p>
+            </div>
+            <button class="buy-button">Buy Now</button>
+        </div>
+
+        <!-- Tati Bellam Palli Undalu -->
+        <div class="product-row">
+            <img src="tati-bellam-palli-undalu.jpg" alt="Tati Bellam Palli Undalu" class="product-image">
+            <div class="product-details">
+                <h3>Tati Bellam Palli Undalu</h3>
+                <p>Quantity: <input type="number" class="quantity-input" value="1000" min="1" onchange="updatePrice(this, 500)"> grams</p>
+                <p class="price">Price: ₹<span class="product-price">500</span></p>
+            </div>
+            <button class="buy-button">Buy Now</button>
+        </div>
+
+        <!-- Mittai Undalu -->
+        <div class="product-row">
+            <img src="mittai-undalu.jpg" alt="Mittai Undalu" class="product-image">
+            <div class="product-details">
+                <h3>Mittai Undalu</h3>
+                <p>Quantity: <input type="number" class="quantity-input" value="1000" min="1" onchange="updatePrice(this, 360)"> grams</p>
+                <p class="price">Price: ₹<span class="product-price">360</span></p>
+            </div>
+            <button class="buy-button">Buy Now</button>
+        </div>
+
+        <!-- Mittai Achu -->
+        <div class="product-row">
+            <img src="mittai-achu.jpg" alt="Mittai Achu" class="product-image">
+            <div class="product-details">
+                <h3>Mittai Achu</h3>
+                <p>Quantity: <input type="number" class="quantity-input" value="1000" min="1" onchange="updatePrice(this, 360)"> grams</p>
+                <p class="price">Price: ₹<span class="product-price">360</span></p>
+            </div>
+            <button class="buy-button">Buy Now</button>
+        </div>
+
+        <!-- Mittai Achu (Letha Pakam) -->
+        <div class="product-row">
+            <img src="mittai-achu-letha-pakam.jpg" alt="Mittai Achu (Letha Pakam)" class="product-image">
+            <div class="product-details">
+                <h3>Mittai Achu (Letha Pakam)</h3>
+                <p>Quantity: <input type="number" class="quantity-input" value="1000" min="1" onchange="updatePrice(this, 360)"> grams</p>
+                <p class="price">Price: ₹<span class="product-price">360</span></p>
+            </div>
+            <button class="buy-button">Buy Now</button>
+        </div>
+
+        <!-- Palli Achu -->
+        <div class="product-row">
+            <img src="palli-achu.jpg" alt="Palli Achu" class="product-image">
+            <div class="product-details">
+                <h3>Palli Achu</h3>
+                <p>Quantity: <input type="number" class="quantity-input" value="1000" min="1" onchange="updatePrice(this, 360)"> grams</p>
+                <p class="price">Price: ₹<span class="product-price">360</span></p>
+            </div>
+            <button class="buy-button">Buy Now</button>
+        </div>
+
+        <!-- Marmarala Undalu -->
+        <div class="product-row">
+            <img src="marmarala-undalu.jpg" alt="Marmarala Undalu" class="product-image">
+            <div class="product-details">
+                <h3>Marmarala Undalu</h3>
+                <p>Quantity: <input type="number" class="quantity-input" value="60" min="1" onchange="updatePrice(this, 60)"> grams</p>
+                <p class="price">Price: ₹<span class="product-price">60</span></p>
+            </div>
+            <button class="buy-button">Buy Now</button>
+        </div>
+
+        <!-- Nuvvula Achu -->
+        <div class="product-row">
+            <img src="nuvvula-achu.jpg" alt="Nuvvula Achu" class="product-image">
+            <div class="product-details">
+                <h3>Nuvvula Achu</h3>
+                <p>Quantity: <input type="number" class="quantity-input" value="600" min="1" onchange="updatePrice(this, 600)"> grams</p>
+                <p class="price">Price: ₹<span class="product-price">600</span></p>
+            </div>
+            <button class="buy-button">Buy Now</button>
+        </div>
+
+        <!-- Palli Chikki (Small) -->
+        <div class="product-row">
+            <img src="palli-chikki-small.jpg" alt="Palli Chikki (Small)" class="product-image">
+            <div class="product-details">
+                <h3>Palli Chikki (Small)</h3>
+                <p>Quantity: <input type="number" class="quantity-input" value="360" min="1" onchange="updatePrice(this, 360)"> grams</p>
+                <p class="price">Price: ₹<span class="product-price">360</span></p>
+            </div>
+            <button class="buy-button">Buy Now</button>
+        </div>
+
+        <!-- Palli Chikki Pcs -->
+        <div class="product-row">
+            <img src="palli-chikki-pcs.jpg" alt="Palli Chikki Pcs" class="product-image">
+            <div class="product-details">
+                <h3>Palli Chikki Pcs</h3>
+                <p>Quantity: <input type="number" class="quantity-input" value="20" min="1" onchange="updatePrice(this, 20)"> pcs</p>
+                <p class="price">Price: ₹<span class="product-price">20</span></p>
+            </div>
+            <button class="buy-button">Buy Now</button>
+        </div>
+
+        <!-- Nuvvula Chikki (Small) -->
+        <div class="product-row">
+            <img src="nuvvula-chikki-small.jpg" alt="Nuvvula Chikki (Small)" class="product-image">
+            <div class="product-details">
+                <h3>Nuvvula Chikki (Small)</h3>
+                <p>Quantity: <input type="number" class="quantity-input" value="600" min="1" onchange="updatePrice(this, 600)"> grams</p>
+                <p class="price">Price: ₹<span class="product-price">600</span></p>
+            </div>
+            <button class="buy-button">Buy Now</button>
+        </div>
+
+        <!-- Nuvvula Chikki Pcs -->
+        <div class="product-row">
+            <img src="nuvvula-chikki-pcs.jpg" alt="Nuvvula Chikki Pcs" class="product-image">
+            <div class="product-details">
+                <h3>Nuvvula Chikki Pcs</h3>
+                <p>Quantity: <input type="number" class="quantity-input" value="20" min="1" onchange="updatePrice(this, 20)"> pcs</p>
+                <p class="price">Price: ₹<span class="product-price">20</span></p>
+            </div>
+            <button class="buy-button">Buy Now</button>
+        </div>
+
+        <!-- Panchadara Kommulu -->
+        <div class="product-row">
+            <img src="panchadara-kommulu.jpg" alt="Panchadara Kommulu" class="product-image">
+            <div class="product-details">
+                <h3>Panchadara Kommulu</h3>
+                <p>Quantity: <input type="number" class="quantity-input" value="360" min="1" onchange="updatePrice(this, 360)"> grams</p>
+                <p class="price">Price: ₹<span class="product-price">360</span></p>
+            </div>
+            <button class="buy-button">Buy Now</button>
+        </div>
+
+        <!-- Belam Kommulu -->
+        <div class="product-row">
+            <img src="belam-kommulu.jpg" alt="Belam Kommulu" class="product-image">
+            <div class="product-details">
+                <h3>Belam Kommulu</h3>
+                <p>Quantity: <input type="number" class="quantity-input" value="360" min="1" onchange="updatePrice(this, 360)"> grams</p>
+                <p class="price">Price: ₹<span class="product-price">360</span></p>
+            </div>
+            <button class="buy-button">Buy Now</button>
+        </div>
+
+        <!-- Mysorepak (Oil) -->
+        <div class="product-row">
+            <img src="mysorepak-oil.jpg" alt="Mysorepak (Oil)" class="product-image">
+            <div class="product-details">
+                <h3>Mysorepak (Oil)</h3>
+                <p>Quantity: <input type="number" class="quantity-input" value="400" min="1" onchange="updatePrice(this, 400)"> grams</p>
+                <p class="price">Price: ₹<span class="product-price">400</span></p>
+            </div>
+            <button class="buy-button">Buy Now</button>
+        </div>
+
+        <!-- Mysore Pak (Ghee) -->
+        <div class="product-row">
+            <img src="mysorepak-ghee.jpg" alt="Mysore Pak (Ghee)" class="product-image">
+            <div class="product-details">
+                <h3>Mysore Pak (Ghee)</h3>
+                <p>Quantity: <input type="number" class="quantity-input" value="600" min="1" onchange="updatePrice(this, 600)"> grams</p>
+                <p class="price">Price: ₹<span class="product-price">600</span></p>
+            </div>
+            <button class="buy-button">Buy Now</button>
+        </div>
+
+        <!-- Horlicks Mysorepak -->
+        <div class="product-row">
+            <img src="horlicks-mysorepak.jpg" alt="Horlicks Mysorepak" class="product-image">
+            <div class="product-details">
+                <h3>Horlicks Mysorepak</h3>
+                <p>Quantity: <input type="number" class="quantity-input" value="600" min="1" onchange="updatePrice(this, 600)"> grams</p>
+                <p class="price">Price: ₹<span class="product-price">600</span></p>
+            </div>
+            <button class="buy-button">Buy Now</button>
+        </div>
+
+        <!-- Motichur Laddu -->
+        <div class="product-row">
+            <img src="motichur-laddu.jpg" alt="Motichur Laddu" class="product-image">
+            <div class="product-details">
+                <h3>Motichur Laddu</h3>
+                <p>Quantity: <input type="number" class="quantity-input" value="520" min="1" onchange="updatePrice(this, 520)"> grams</p>
+                <p class="price">Price: ₹<span class="product-price">520</span></p>
+            </div>
+            <button class="buy-button">Buy Now</button>
+        </div>
+
+        <!-- Sanna Boondi Laddu -->
+        <div class="product-row">
+            <img src="sanna-boondi-laddu.jpg" alt="Sanna Boondi Laddu" class="product-image">
+            <div class="product-details">
+                <h3>Sanna Boondi Laddu</h3>
+                <p>Quantity: <input type="number" class="quantity-input" value="520" min="1" onchange="updatePrice(this, 520)"> grams</p>
+                <p class="price">Price: ₹<span class="product-price">520</span></p>
+            </div>
+            <button class="buy-button">Buy Now</button>
+        </div>
+
+        <!-- Laavu Boondi Laddu (Oil) -->
+        <div class="product-row">
+            <img src="laavu-boondi-laddu-oil.jpg" alt="Laavu Boondi Laddu (Oil)" class="product-image">
+            <div class="product-details">
+                <h3>Laavu Boondi Laddu (Oil)</h3>
+                <p>Quantity: <input type="number" class="quantity-input" value="400" min="1" onchange="updatePrice(this, 400)"> grams</p>
+                <p class="price">Price: ₹<span class="product-price">400</span></p>
+            </div>
+            <button class="buy-button">Buy Now</button>
+        </div>
+
+        <!-- Bandar Laddu -->
+        <div class="product-row">
+            <img src="bandar-laddu.jpg" alt="Bandar Laddu" class="product-image">
+            <div class="product-details">
+                <h3>Bandar Laddu</h3>
+                <p>Quantity: <input type="number" class="quantity-input" value="520" min="1" onchange="updatePrice(this, 520)"> grams</p>
+                <p class="price">Price: ₹<span class="product-price">520</span></p>
+            </div>
+            <button class="buy-button">Buy Now</button>
+        </div>
+
+        <!-- Basin Laddu -->
+        <div class="product-row">
+            <img src="basin-laddu.jpg" alt="Basin Laddu" class="product-image">
+            <div class="product-details">
+                <h3>Basin Laddu</h3>
+                <p>Quantity: <input type="number" class="quantity-input" value="520" min="1" onchange="updatePrice(this, 520)"> grams</p>
+                <p class="price">Price: ₹<span class="product-price">520</span></p>
+            </div>
+            <button class="buy-button">Buy Now</button>
+        </div>
+
+        <!-- Magic Laddu -->
+        <div class="product-row">
+            <img src="magic-laddu.jpg" alt="Magic Laddu" class="product-image">
+            <div class="product-details">
+                <h3>Magic Laddu</h3>
+                <p>Quantity: <input type="number" class="quantity-input" value="520" min="1" onchange="updatePrice(this, 520)"> grams</p>
+                <p class="price">Price: ₹<span class="product-price">520</span></p>
+            </div>
+            <button class="buy-button">Buy Now</button>
+        </div>
+
+        <!-- Traditional Mixed Items -->
+        <div class="product-row">
+            <img src="traditional-mixed-items.jpg" alt="Traditional Mixed Items" class="product-image">
+            <div class="product-details">
+                <h3>Traditional Mixed Items</h3>
+                <p>Quantity: <input type="number" class="quantity-input" value="520" min="1" onchange="updatePrice(this, 520)"> grams</p>
+                <p class="price">Price: ₹<span class="product-price">520</span></p>
+            </div>
+            <button class="buy-button">Buy Now</button>
+        </div>
+
+    </div>
+
+    <script>
+        function updatePrice(inputElement, basePrice) {
+            var quantity = inputElement.value;
+            var price = (quantity * basePrice) / 100; // Price adjustment based on quantity
+            inputElement.closest('.product-row').querySelector('.product-price').textContent = price.toFixed(2);
+        }
+    </script>
+
+</body>
+</html>

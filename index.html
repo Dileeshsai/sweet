@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mitai</title>
+    <link rel="stylesheet" href="navstyles.css">
+    <style>/* Global Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Body and Font Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f8f8;
+        }
+        .static-background {
+            background-image: url('images/background.jpg'); /* Replace with your desired image */
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+        }
+        /* Navbar Styling */
+        
+        a{
+            text-decoration: none;
+            text-decoration-color: none;
+        }
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+        
+            background-size: cover;
+            background-position: center;
+            transition: background-image 1s ease-in-out;
+        }
+        
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .hero button {
+            padding: 0.8rem 2rem;
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            font-size: 1.1rem;
+            cursor: pointer;
+            border-radius: 50px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .hero button:hover {
+            background-color: #f8b400;
+        }
+        
+/* Menu Section */
+#menu {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+#menu h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Wrapper to contain the menu */
+.menu-wrapper {
+    overflow: hidden; /* Hide the overflowed content, critical for scrolling effect */
+    position: relative;
+}
+
+/* Flexbox container for items */
+.menu-items {
+    display: flex; /* Use Flexbox to make items horizontal */
+    gap: 2rem; /* Space between items */
+    animation: scrollMenu 30s linear infinite; /* Infinite horizontal scroll animation */
+    flex-wrap: nowrap; /* Prevent wrapping */
+}
+
+.menu-item {
+    background-color: transparent;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 250px;
+    height: 300px;
+    margin: 0 1rem; /* Adjust spacing between items */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-item img {
+    width: 100%; /* Ensures image takes the full width of the container */
+    height: 200px; /* Fixed height */
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    object-fit: cover;
+}
+
+.menu-item h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.menu-item p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Animation for infinite scroll */
+@keyframes scrollMenu {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%); /* Scroll to the left */
+    }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .menu-items {
+        flex-wrap: nowrap; /* Prevent items from wrapping on mobile */
+        gap: 1rem; /* Adjust spacing */
+    }
+
+    .menu-item {
+        width: 200px; /* Reduce size of items on mobile */
+        height: 250px; /* Adjust height for mobile */
+    }
+}
+
+        /* About Section */
+        #about {
+background-image: url('images/navbar.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+            height: 60vh;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        align-items: center;
+    }
+        
+        #about h2 {
+            margin-top: 3rem;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        #about p {
+            width: 60%;
+            font-size: 1.2rem;
+            color: #555;
+            text-align: center;
+        
+        }
+        
+        /* Contact Section */
+        #contact {
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        #contact form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        #contact input, #contact textarea {
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        
+        #contact button {
+            padding: 1rem;
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            font-size: 1.1rem;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        
+        #contact button:hover {
+            background-color: #f8b400;
+        }
+        
+        /* Footer Styling */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+        @media (max-width: 768px) {
+            .hero h1{
+                font-size: 2rem;
+            }
+}
+        
+        
+        </style>
+</head>
+
+<body class="static-background">
+    <!-- Navbar -->
+   
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <header>
+            <nav>
+                <div class="logo">Mitai</div>
+                <div class="nav-links" id="navLinks">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </header>
+        <div class="hero-content">
+            <h1>Freshly Baked Goods Every Day</h1>
+            <button onclick="scrollToSection('menu')">Explore Menu</button>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu">
+        <h2>Our Menu</h2>
+        <div class="menu-wrapper">
+            <div class="menu-items">
+                <a href="menu.html">
+                    <div class="menu-item">
+                        <img src="https://tse2.mm.bing.net/th?id=OIP.iT3BgzCKu8duI1097r1OogHaE8&pid=Api&P=0&h=180" alt="Traditional Sweets">
+                        <h4>Traditional Sweets</h4>
+                    </div>
+                </a>
+                <a href="menu.html">
+                    <div class="menu-item">
+                        <img src="https://tse2.mm.bing.net/th?id=OIP.iT3BgzCKu8duI1097r1OogHaE8&pid=Api&P=0&h=180" alt="Traditional Sweets">
+                        <h4>Milk Sweets</h4>
+                    </div>
+                </a>
+                <a href="menu.html">
+                    <div class="menu-item">
+                        <img src="https://tse2.mm.bing.net/th?id=OIP.INpqQYfhTqxViisg6rxgXAHaE6&pid=Api&P=0&h=180" alt="Bengali Sweets">
+                        <h4>Bengali Sweets</h4>
+                    </div>
+                </a>
+                <a href="menu.html">
+                    <div class="menu-item">
+                        <img src="https://www.newrameshkirana.com/wp-content/uploads/2020/06/Dryfruit-honey-bites-scaled.jpg" alt="Dryfruits N Bites">
+                        <h4>Dryfruits N Bites</h4>
+                    </div>
+                </a>
+                <a href="menu.html">
+                    <div class="menu-item">
+                        <img src="https://m.media-amazon.com/images/I/51ODD6Q+6RL.jpg" alt="Kaja Sweets N Special Items">
+                        <h4>Kaja Sweets N Special Items</h4>
+                    </div>
+                </a>
+                <a href="menu.html">
+                    <div class="menu-item">
+                        <img src="https://res.cloudinary.com/jerrick/image/upload/d_642250b563292b35f27461a7.png,f_jpg,fl_progressive,q_auto,w_1024/6482328e915504001d759e3c.jpg" alt="Hot Items">
+                        <h4>Hot Items</h4>
+                    </div>
+                </a>
+                <a href="menu.html">
+                    <div class="menu-item">
+                        <img src="https://wallpaperaccess.com/full/4498025.jpg" alt="Karam Podulu N Pickles">
+                        <h4>Karam Podulu N Pickles</h4>
+                    </div>
+                </a>
+                <a href="menu.html">
+                    <div class="menu-item">
+                        <img src="http://flavorverse.com/wp-content/uploads/2018/01/Kaju-Barfi-Indian-Dessert-with-Silver-Foil.jpg" alt="Bakery">
+                        <h4>Bakery</h4>
+                    </div>
+                </a>
+                <a href="menu.html">
+                    <div class="menu-item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSc3e1FDbW6GxsQNgMUaBOhuSY0XPoq43VAmg&s" alt="Milk Shakes">
+                        <h4>Milk Shakes</h4>
+                    </div>
+                </a>
+                <a href="menu.html">
+                    <div class="menu-item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIpDROZNAC7LjmvEw39dRlGCnGcPXqQI2A0w&s" alt="Chaat">
+                        <h4>Chaat</h4>
+                    </div>
+                </a>
+                <a href="menu.html">
+                    <div class="menu-item">
+                        <img src="https://media.istockphoto.com/id/1253099922/photo/assortment-of-fresh-fruits-and-vegetables-juices-in-rainbow-colors.jpg?s=612x612&w=0&k=20&c=lFC0lAcR0FoPegoMTuJxc3fEAISbJVwZ1VmWNHzVEX8=" alt="Juices">
+                        <h4>Juices</h4>
+                    </div>
+                </a>
+                <a href="menu.html">
+                    <div class="menu-item">
+                        <img src="https://www.shutterstock.com/image-photo/poznan-poland-oct-28-2021-600nw-2075670211.jpg" alt="Drinks">
+                        <h4>Drinks</h4>
+                    </div>
+                </a>
+                <a href="menu.html">
+                    <div class="menu-item">
+                        <img src="https://media.gettyimages.com/id/157472912/photo/ice-cream-composition-on-a-bowl.jpg?s=612x612&w=gi&k=20&c=AniWX1OhaarUxCkgjUoKiA3bKVllK0upCylW6Z0PCMQ=" alt="Ice Cream">
+                        <h4>Ice Cream</h4>
+                    </div>
+                </a>
+                <a href="menu.html">
+                    <div class="menu-item">
+                        <img src="https://mrbrownbakery.com/image/images/GJ7uCwGiteTF24HTWBclkziVTdhpQeZWH23MvQfq.jpeg?p=full" alt="Chocolates">
+                        <h4>Chocolates</h4>
+                    </div>
+                </a>
+                <a href="menu.html">
+                    <div class="menu-item">
+                        <img src="https://cdn.citymapia.com/puthuppally/best-bakers-and-restaurent/2408/Portfolio.jpg?biz=541" alt="Festival Items">
+                        <h4>Festival Items</h4>
+                    </div>
+                </a>
+                <a href="menu.html">
+                    <div class="menu-item">
+                        <img src="https://okcredit-blog-images-prod.storage.googleapis.com/2021/05/bakerysupplies2.jpg" alt="Miscellaneous">
+                        <h4>Miscellaneous</h4>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    
+
+
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>At Delicious Bakery, we pride ourselves on using only the best ingredients to create mouth-watering baked goods. Our bakery has been serving the community for over 10 years, bringing joy and sweetness to every bite!</p>
+
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit" id="submitBtn">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Delicious Bakery | Designed by You</p>
+    </footer>
+
+    <script>
+        // Smooth Scroll to Menu Section
+document.getElementById("hamburger").addEventListener("click", function() {
+    const navLinks = document.getElementById("navLinks");
+    navLinks.classList.toggle("active");
+});
+function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    window.scrollTo({
+        top: section.offsetTop,
+        behavior: "smooth"
+    });
+}
+
+// Contact form interaction (simple feedback)
+document.getElementById("submitBtn").addEventListener("click", function(event) {
+    event.preventDefault();
+    alert("Your message has been sent successfully! Thank you for reaching out.");
+});
+let currentIndex = 0;
+const images = [
+    'images/bakery1.jpg',  // First image from the local images folder
+    'images/bakery2.jpg',  // Second image from the local images folder
+    'images/bakery3.jpg',  // Third image from the local images folder
+    'images/bakery4.jpg'   // Fourth image from the local images folder
+];
+
+function changeBackground() {
+    const hero = document.querySelector('.hero');
+
+    hero.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.6),   rgba(0, 0, 0, 0.6)),url(${images[currentIndex]})`;
+    currentIndex = (currentIndex + 1) % images.length;  // Loop back to the first image
+}
+
+// Set interval for changing background every 5 seconds
+setInterval(changeBackground, 5000);
+
+// Initialize the first background image
+changeBackground();
+    </script>
+</body>
+</html>
